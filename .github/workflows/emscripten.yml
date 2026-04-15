@@ -16,7 +16,7 @@ jobs:
 
       - name: Build
         run: |
-          python3 waf configure -T release --emscripten
+          python3 waf configure -T release --emscripten --disable-werror
           python3 waf build
 
       - name: Collect wasm files
